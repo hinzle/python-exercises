@@ -130,8 +130,7 @@ if proceed.lower().startswith('y'):
         i_cubed = i ** 3
         print(f'{i: <6} | {i_squared: ^7} | {i_cubed: 5}')
 
-# Bonus
-
+# 5
 while True:
     user_number = input("Please enter a numeral between 0 and 100: ")
     if user_number.isdigit():
@@ -153,7 +152,7 @@ else:
 	grade = 'A'
 print(grade)
 
-# Bonus
+# 6
 bookshelf = [
     {'title': 'Annihilation',
     'author': 'Jeff Vandermeer',
@@ -174,7 +173,7 @@ for book in bookshelf:
     [print(key, ': ', book[key]) for key in book]
     print('------')
 
-# Bonus
+# 6.a
 
 picked_genre = input('Please pick a genre and I will return the titles of that genre on shelf. \n')
 
