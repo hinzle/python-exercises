@@ -12,6 +12,13 @@ if x in ['Saturday', 'Sunday' ]:
 else:
 	print('Today is a weekday.')
 
+# 1.b.alt
+x=input('Enter day of the week: ')
+if day_of_week.lower().startswith('s'):
+    print('weekend')
+else:
+    print('you better work ')
+
 # 1.c
 hours_worked=50
 hourly_rate=100

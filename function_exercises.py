@@ -49,11 +49,130 @@ def capitalizer(x):
 	x=list(x)
 	if x[0].islower and is_consonant(x[0]):
 		x[0]=x[0].upper()
-		x=' '.join(x)
+		x=''.join(x)
 		print(x)
+	else:
+		print('Wrong.')
+
+capitalizer('cory')
+capitalizer('Cory')
+capitalizer('alfred')
+capitalizer('Alfred')
+
+# 5
+def calculate_tip(price,tip):
+	if tip<=1 and tip>=0:
+		return price*tip
+	else:
+		print('Wrong.')
+
+calculate_tip(18.20,.5)
+calculate_tip(1,1)
+calculate_tip(1,0)
+calculate_tip(0,0)
+calculate_tip(0,1)
+calculate_tip(1,2)
+calculate_tip(e,.5)
+
+# 6
+def apply_discount(price,discount):
+	if discount<=1 and discount>=0:
+		return price-(price*discount)
+	else:
+		print('Wrong.')	
 
 
-capitalizer('frank')
+apply_discount(18.2,.5)
+apply_discount(1,0)
+apply_discount(0,1)
+apply_discount(1,1)
+apply_discount(0,0)
+apply_discount(1,2)
+apply_discount(e,.5)
+
+# 7
+def handle_commas(x):
+	liss=[]
+	for i in x:
+		if i == ',':
+			continue
+		else:
+			liss.append(i)
+
+	handled=''.join(liss)
+	return handled
+
+
+handle_commas('3,4,5')	
+
+# 8
+def get_letter_grade(grade):
+	if grade in range(60):
+		grade = 'F'
+	elif grade in range(60,67):
+		grade = 'D'
+	elif grade in range(67,80):
+		grade = 'C'
+	elif grade in range(80,88):
+		grade = 'B'
+	else:
+		grade = 'A'
+	return grade
+
+get_letter_grade(0)
+get_letter_grade(50)
+get_letter_grade(60)
+get_letter_grade(70)
+get_letter_grade(80)
+get_letter_grade(90)
+get_letter_grade(100)
+
+# 9
+def remove_vowels(x):
+	liss=[]
+	for i in x:
+		if is_vowel(i):
+			continue
+		else:
+			liss.append(i)
+	removed=''.join(liss)
+	return removed		
+
+
+
+remove_vowels('Frank')
+
+remove_vowels('Cory')
+
+remove_vowels('abcdefghijklmnopqrstuvwxyz')
+
+#10
+def normalize_name(x):
+	import string
+	x=x.lower()
+	lowercase_alphabets=list(string.ascii_lowercase)
+	liss=[]
+	for i in x:
+		if i==' ':
+			liss.append('_')
+		elif i in lowercase_alphabets:
+			liss.append(i)
+		else:
+			continue
+	normalized = ''.join(liss)
+	return normalized
+
+#x=x.replace #['!','@','#','$','%','^','&','*','(',')','+','-','=',',' ',]	
+
+normalize_name('Frank')
+normalize_name('Cory')
+normalize_name('abcde fghijklmn OPQRSTUVW XYZ!@#$%^ &*()_+1234567890-=')
+
+# 11 
+
+
+
+
 
 
 
